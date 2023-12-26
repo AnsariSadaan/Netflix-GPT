@@ -2,6 +2,9 @@
 
 - npx cretae-react-app netflix-gpt
 - configured TailwindCSS
+- Header
+- Login form
+- Sign up form
 
 
 # Features

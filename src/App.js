@@ -1,8 +1,24 @@
-import './App.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Browse from './components/Browse';
+import Login from './components/Login';
 
 function App() {
+
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/browse",
+      element: <Browse/>
+    },
+  ]);
+
   return (
-    <div className="text-3xl font-bold text-green-800">Hello Sadaan, let's build Netflix - GPT</div>
+    <div>
+      <RouterProvider router={appRouter}/>
+    </div>
   );
 }
 
