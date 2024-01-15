@@ -17,7 +17,7 @@
 - Update profile Api
 - fetch Movies from tmdb
 - Bugfix: Sign up user displayName and profile picture update
-- Bugfix: if the user is not logged in Redirect /browse to login page and vice-versa
+- Bugfix: if the user is not logged in Redirect /browse to - - login page and vice-versa
 - Unsubscribe to the onAuthStateChange callback
 - Add hardcoded values in constants file
 - Register TMDB API & create an app & get access token 
@@ -47,7 +47,7 @@
 - Memoization
 - Added .env file
 - Adding .env file to gitignore
-
+- made our site responsive
 
 # Features
 - login/signup page
