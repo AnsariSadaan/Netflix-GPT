@@ -56,8 +56,15 @@ const Header = () => {
                     ))}
                 </select>)}
                 <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg' onClick={handleGptSeacrhClick}>{showGptSearch ? "Homepage" : "GPT Search"}</button>
-                <img className='hidden md:block w-12 h-12' src={user?.photoURL} alt="usericon" />
-                <button onClick={handleSignout} className='font-bold text-white'>Sign Out</button>
+                {/* <img className='hidden md:block w-14 h-11 mx-4 my-2 ' src={user?.photoURL} alt="usericon" /> */}
+                {/* <button onClick={handleSignout} className='font-bold text-white'>Sign Out</button> */}
+                <button
+                    className="text-white md:block lg:text-base md:text-base font-normal hover:opacity-80 h-12 w-15 py-2 px-4 mx-4 my-2 rounded-md mr-2.5 bg-zinc-700"
+                    onClick={handleSignout}
+                >
+                    <i className="ri-logout-box-r-line pr-0.5 lg:pr-1"></i>
+                    Signout
+                </button>
             </div>)}
         </div>
     )
