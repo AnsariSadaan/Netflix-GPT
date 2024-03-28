@@ -24,16 +24,6 @@ const Browse = () => {
                         <SecondaryContainer />
                     </>)
             }
-
-
-            {/* {
-                Main Video Conatiner
-                    -VideoBackground
-                    -VideoTitle
-                Secondary Container
-                    - Movie List * n
-                        - Card * n
-            } */}
         </div>
     )
 }

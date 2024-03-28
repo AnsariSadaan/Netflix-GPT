@@ -32,7 +32,6 @@ const Header = () => {
                 navigate("/")
             }
         });
-        //unsubscribe when the component is unmount
         return () => unsubscribe();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -42,12 +41,11 @@ const Header = () => {
     }
 
     const handleLanguageChange = (e)=> {
-        // console.log(e.target.value);
         dispatch(changeLanguage(e.target.value));
     }
 
     return (
-        <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between'>
+        <div className='absolute w-[100%] px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between'>
             <img className='w-44 mx-auto md:mx-0' src={LOGO} alt="logo" />
             {user && (<div className='flex justify-between p-2'>
                 {showGptSearch &&  (<select className='m-2 p-2 bg-gray-900 text-white' onClick={handleLanguageChange}>
@@ -56,12 +54,9 @@ const Header = () => {
                     ))}
                 </select>)}
                 <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg' onClick={handleGptSeacrhClick}>{showGptSearch ? "Homepage" : "GPT Search"}</button>
-                {/* <img className='hidden md:block w-14 h-11 mx-4 my-2 ' src={user?.photoURL} alt="usericon" /> */}
-                {/* <button onClick={handleSignout} className='font-bold text-white'>Sign Out</button> */}
                 <button
                     className="text-white md:block lg:text-base md:text-base font-normal hover:opacity-80 h-12 w-15 py-2 px-4 mx-4 my-2 rounded-md mr-2.5 bg-zinc-700"
-                    onClick={handleSignout}
-                >
+                    onClick={handleSignout}>
                     <i className="ri-logout-box-r-line pr-0.5 lg:pr-1"></i>
                     Signout
                 </button>
